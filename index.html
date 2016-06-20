@@ -1,52 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>iPress News Portal</title>
-
     <!-- Bootstrap -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/slick.css">
     <!-- Custom stylesheet -->
     <link rel="stylesheet" type="text/css" href="assets/css/custom/style.css">
-
+    <link rel="stylesheet" type="text/css" href="assets/sass/partials/_header.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-  </head>
-  <body>
+</head>
+
+<body>
     <!-- This section for Jamil -->
     <section id="header-wrap">
-
+        <div class="container-fluid">
+            <!-- Hot news , date and language selection section -->
+            <div class="row topHeader">
+                <div class="container">
+                    <div class="row">
+                        <div class=" col-md-6 height hotNewsMain col-xs-12 overflow flex ">
+                            <a href="#">
+                                <div class="live-cta">
+                                    <div class="live-icon">
+                                        <div class="live-pulse-min"></div>
+                                        <div class="live-pulse-max"></div>
+                                    </div>
+                                </div>
+                                <div class="hotNewsTextMain">
+                                    <div class="newsOverlay"></div>
+                                    <p class="hotNewsText">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-2 col-md-offset-1  push height flex col-xs-4">
+                            <div class="date flex">
+                                <p class="todaysDate"> </p>
+                            </div>
+                        </div>
+                        <div class="col-md-2 height  col-xs-4">
+                            <div class="socialNetworks ">
+                                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-github" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-google-plus " aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-md-1 height languageSelector  col-xs-2 ">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--  Logo and Adv -->
+            <div class="row topLogo">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-2 col-xs-12 row mainLogo flexDisplay"><img src="logo.png"></div>
+                        <div class="col-md-offset-2 col-xs-12 flexDisplay advMain row col-md-8 ">
+                            <div class="adv">
+                                <img src="adv.jpg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--   Navbar row -->
+            <div class="row topNav col-xs-12">
+                <div class="container">
+                    <div class="row">
+                        <nav class="navbar navbar-inverse " role="navigation">
+                            <div class="container">
+                                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                    <a class="navbar-brand" href="#">
+                                        <i class="fa fa-home" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                    <ul class="nav navbar-nav">
+                                        <li><a href="#">Business</a><span class="hover"></span></li>
+                                        <li><a href="#">Travel</a><span class="hover"></span></li>
+                                        <li><a href="#">People</a><span class="hover"></span></li>
+                                        <li><a href="#">Sports</a><span class="hover"></span></li>
+                                        <li><a href="#">Music</a><span class="hover"></span></li>
+                                        <li><a href="#">Forum</a><span class="hover"></span></li>
+                                        <li><a href="#">Contact</a><span class="hover"></span></li>
+                                        <li>
+                                            <div class="col-md-offset-3">
+                                                <div class="overlayInput"></div>
+                                                <input type="search" name="search">
+                                            </div>
+                                            <div class="searchButton">
+                                                <i class="fa fa-search" aria-hidden="true"></i>
+                                            </div>
+                                        </li>
+                                        <li></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
     </section>
     <!-- This section for Jamil -->
     <section id="slider-wrap">
-      
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="container-fluid padding sliderFrame">
+                        <div class=" col-md-8 padding ">
+                            <div class="sliderImgFull"></div>
+                        </div>
+                        <div class="col-md-4 sliderMain padding ">
+                            <div class="sliderMainTrack">
+                                <div class="sliderTrack">
+                                    <div class="sliderNews">
+                                        <div class="sliderNewsTriangle"></div>
+                                    </div>
+                                    <div class="sliderNews">
+                                        <div class="sliderNewsTriangle"></div>
+                                    </div>
+                                    <div class="sliderNews">
+                                        <div class="sliderNewsTriangle"></div>
+                                    </div>
+                                    <div class="sliderNews">
+                                        <div class="sliderNewsTriangle"></div>
+                                    </div>
+                                    <div class="sliderNews">
+                                        <div class="sliderNewsTriangle"></div>
+                                    </div>
+                                    <div class="sliderNews">
+                                        <div class="sliderNewsTriangle"></div>
+                                    </div>
+                                    <div class="sliderNews">
+                                        <div class="sliderNewsTriangle"></div>
+                                    </div>
+                                    <div class="sliderNews">
+                                        <div class="sliderNewsTriangle"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     <div class="container">
         <div class="row">
             <!-- This section for Etibar -->
             <section id="content-wrap">
-              
             </section>
             <!-- This section for Sabina -->
             <section id="sidebar-wrap">
-              
             </section>
         </div>
     </div>
     <!-- This section for Aslan -->
     <section id="footer-wrap">
-      
     </section>
-
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="assets/js/jquery-1.12.4.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="assets/js/main.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
-  </body>
+    <script src="assets/js/slick.js"></script>
+</body>
+
 </html>
