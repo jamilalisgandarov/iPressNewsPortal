@@ -2,6 +2,26 @@ $colorPink: #e84a4a;
 $colorDark: #1d1e20;
 $colorLikeGray: #242527;
 $colorBorder: #2b2c2f;
+$twitter: #00aced;
+$facebook: #3b5998;
+$googleplus: #dd4b39;
+$pinterest: #cb2027;
+$linkedin: #007bb6;
+$youtube: #bb0000;
+$vimeo: #aad450;
+$tumblr: #32506d;
+$instagram: #517fa4;
+$flickr: #ff0084;
+$dribbble: #ea4c89;
+$quora: #a82400;
+$foursquare: #0072b1;
+$forrst: #5B9A68;
+$vk: #45668e;
+$wordpress: #21759b;
+$stumbleupon: #EB4823;
+$yahoo: #7B0099;
+$blogger: #fb8f3d;
+$soundcloud: #ff3a00;
 body {
     overflow-x: hidden;
 }
@@ -200,14 +220,22 @@ body {
                 border-radius: 5px;
             }
             .fa:hover {
-                padding: 6px 10px;
-                border-radius: 5px;
+                transform:translate3d(0,-3px,5px);
             }
             a:first-child i:hover {
-                background-color: #325c94;
+                background-color: $facebook;
             }
             a:nth-child(2) i:hover {
                 background-color: lightgray;
+            }
+             a:nth-child(3) i:hover {
+                background-color: $dribbble;
+            }
+             a:nth-child(4) i:hover {
+                background-color: $twitter;
+            }
+             a:nth-child(5) i:hover {
+                background-color: $googleplus;
             }
         }
         .languageSelector {
@@ -228,6 +256,7 @@ body {
                         display: none;
                         img {
                             padding: 10px;
+                            cursor: pointer;
                         }
                     }
                     li:first-child {
@@ -323,6 +352,7 @@ body {
                     list-style: none;
                     padding: 6px;
                     .mainSearch {
+                        margin-right: 60px;
                         .searchMain {
                             position: relative;
                             display: inline-block;
@@ -492,6 +522,24 @@ body {
         }
         .sliderMain {
             position: relative;
+            i:first-child {
+                position: absolute;
+                font-size: 40px;
+                left: 127px;
+                z-index: 5;
+                cursor: pointer;
+                top: 0px;
+                color: gray;
+            }
+            i:nth-child(3) {
+                position: absolute;
+                font-size: 40px;
+                left: 127px;
+                z-index: 5;
+                cursor: pointer;
+                bottom: 320px;
+                color: gray;
+            }
         }
     }
     .col-md-8 {
@@ -502,21 +550,44 @@ body {
             width: 100%;
         }
     }
+    .activeSlider{
+        background: $colorLikeGray !important;
+    }
+    .sliderNewsTitleColored{
+        color: #d54646;
+    }
     .sliderNews {
         height: 116px;
-        border-bottom: 1px solid gray;
+        border-bottom: 1px solid $colorBorder;
         background: $colorDark;
+        padding: 5px;
+        cursor:pointer;
+        .sliderNewsTitle,.sliderNewsText{
+            font-family: 'Roboto', sans-serif;
+        }
+        .sliderNewsTitle{
+            margin-bottom: 10px;
+            margin-top: 5px;
+            font-size: 17px;
+            font-weight:bold;
+            color: white;
+        }
+        .sliderNewsText{
+            font-size: 15px;
+            color: lightgray;
+            
+        }
     }
     .sliderTrack {
-        transition: 0.5s ease-out;
+        transition: 0.4s linear;
     }
-    .sliderNewsTriangle {
+    .triangle:before {
+        content: "\A";
         border-style: solid;
         border-width: 10px 15px 10px 0;
         border-color: transparent #1d1e20 transparent transparent;
         position: absolute;
         left: -15px;
-        visibility: hidden;
         margin-top: 50px;
     }
 }
