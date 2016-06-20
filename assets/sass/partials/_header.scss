@@ -2,8 +2,8 @@ $colorPink: #e84a4a;
 $colorDark: #1d1e20;
 $colorLikeGray: #242527;
 $colorBorder: #2b2c2f;
-.body {
-    height: 1000px;
+body {
+    overflow-x: hidden;
 }
 
 .padding {
@@ -71,7 +71,7 @@ $colorBorder: #2b2c2f;
             .newsOverlay {
                 position: absolute;
                 height: 100%;
-                transition: all 10s linear;
+                transition: all 3s linear;
                 width: 100%;
                 right: 0%;
                 background-color: $colorDark;
@@ -211,14 +211,29 @@ $colorBorder: #2b2c2f;
             }
         }
         .languageSelector {
-            /* Dropdown Button */
-            .dropbtn {
-                background-color: transparent;
-                color: white;
-                padding: 16px;
-                font-size: 16px;
-                border: none;
-                cursor: pointer;
+            padding: 7px 21px;
+            float: right;
+            .langSelector {
+                float: right;
+                width: 100%;
+                position: relative;
+                z-index: 5;
+                ul {
+                    list-style: none;
+                    margin: 0px !important;
+                    padding: 0px !important;
+                    li {
+                        margin-bottom: 5px;
+                        transition: 0.4s ease-in;
+                        display: none;
+                        img {
+                            padding: 10px;
+                        }
+                    }
+                    li:first-child {
+                        display: block !important;
+                    }
+                }
             }
         }
     }
@@ -245,12 +260,25 @@ $colorBorder: #2b2c2f;
             height: 90px;
             border: 1px solid black;
         }
+        @media screen and (max-width: 1000px) {
+            .mainLogo {
+                display: flex;
+                justify-content: center;
+            }
+        }
     }
     /*  <!--   Navbar row -->*/
     .topNav {
         height: 60px;
         background-color: $colorDark;
+        width: 105%;
         border-bottom: 3px solid $colorPink;
+        .mainul {
+            position: absolute;
+            width: 100%;
+            z-index: 1;
+            padding: 0px 28px;
+        }
         .navbar-brand {
             font: 12px Lato !important;
             text-transform: uppercase;
@@ -263,7 +291,7 @@ $colorBorder: #2b2c2f;
             a {
                 font: 500 11px Lato;
                 letter-spacing: 2px;
-                padding: 23px 20px!important;
+                padding: 22.5px 20px!important;
                 color: #a3bfc6 !important;
                 text-transform: uppercase;
                 position: relative;
@@ -273,6 +301,10 @@ $colorBorder: #2b2c2f;
                 color: #FFF !important;
             }
             li {
+                background-color: $colorDark;
+                a {
+                    color: lightgray !important;
+                }
                 position: relative;
                 input {
                     background: lightgray;
@@ -284,13 +316,64 @@ $colorBorder: #2b2c2f;
                     margin: 14px 40px;
                     position: relative;
                 }
-                .overlayInput {
-                    position: absolute;
-                    background-color: $colorDark;
-                    width: 100%;
-                    height: 100%;
+            }
+            ul {
+                li {
+                    height: 52px;
+                    list-style: none;
+                    padding: 6px;
+                    .mainSearch {
+                        .searchMain {
+                            position: relative;
+                            display: inline-block;
+                            clear: both;
+                            margin-bottom: 8px;
+                            .overlayInput {
+                                position: absolute;
+                                background-color: $colorDark;
+                                width: 100%;
+                                height: 100%;
+                                position: absolute;
+                                height: 33px;
+                                z-index: 2;
+                                transition: 0.3s ease;
+                            }
+                            input {
+                                background: none;
+                                color: lightgray;
+                                width: 100%;
+                                padding: 5px;
+                                border-radius: 5px;
+                                border: 1px solid gray;
+                            }
+                            input:focus {
+                                outline: 1px solid gray;
+                                box-shadow: none;
+                                inset: none;
+                            }
+                        }
+                        .searchButton {
+                            position: relative;
+                            padding: 9px 10px;
+                            margin-bottom: 8px;
+                            display: inline-block;
+                            a {
+                                padding: 7px 10px !important;
+                                position: absolute;
+                                top: 3px !important;
+                                width: 40px;
+                                border-radius: 5px;
+                                background: #242527;
+                                height: 35px;
+                                padding: 10px;
+                            }
+                            i {
+                                font-size: 21px;
+                                color: lightgray;
+                            }
+                        }
+                    }
                 }
-                ;
             }
         }
         .navbar-brand i {
@@ -302,10 +385,13 @@ $colorBorder: #2b2c2f;
             padding: 0px !important;
             margin-top: 0px !important;
         }
-        .navbar-inverse .navbar-toggle {
-            border: none;
-            border: none !important;
-            background-color: $colorDark !important;
+        // .navbar-inverse {
+        //     border: none;
+        //     border: none !important;
+        //     background-color: $colorDark !important;
+        // }
+        .navbar-toggle {
+            background-color: $colorPink !important;
         }
         .navbar-inverse {
             border: none !important;
@@ -354,6 +440,44 @@ $colorBorder: #2b2c2f;
     }
 }
 
+@media (max-width: 1201px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin: 7.5px -15px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .navbar-text {
+        float: none;
+        margin: 15px 0;
+    }
+    /* since 3.1.0 */
+    .navbar-collapse.collapse.in {
+        display: block!important;
+    }
+    .collapsing {
+        overflow: hidden!important;
+    }
+}
+
 #slider-wrap {
     height: 1000px;
     .sliderFrame {
@@ -382,18 +506,17 @@ $colorBorder: #2b2c2f;
         height: 116px;
         border-bottom: 1px solid gray;
         background: $colorDark;
-
     }
-    .sliderTrack{
-          transition: 0.5s ease-out;
+    .sliderTrack {
+        transition: 0.5s ease-out;
     }
-    .sliderNewsTriangle{
-    border-style: solid;
-    border-width: 10px 15px 10px 0;
-    border-color: transparent #1d1e20 transparent transparent;
-    position: absolute;
-    left: -15px;
-    visibility: hidden;
-    margin-top: 50px;
+    .sliderNewsTriangle {
+        border-style: solid;
+        border-width: 10px 15px 10px 0;
+        border-color: transparent #1d1e20 transparent transparent;
+        position: absolute;
+        left: -15px;
+        visibility: hidden;
+        margin-top: 50px;
     }
 }
