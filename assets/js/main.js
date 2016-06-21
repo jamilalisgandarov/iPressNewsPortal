@@ -97,10 +97,11 @@ jQuery(document).ready(function($) {
             $('.sliderTrack').css('margin-top', '' + $marginOut + 'px');
         }
     }
-    $interval = setInterval(function() { carouselInterval() }, 7000);
+    $interval = setInterval(function() { carouselInterval() }, 10000);
     $('.sliderMainTrack').mousedown(function(event) {
         $clickedX = event.pageY;
         clearInterval($interval);
+         clearInterval($interval2);
         $(".sliderMainTrack").on("mousemove", function(event) {
             $movedX = event.pageY;
             $difference = $movedX - $clickedX;
@@ -176,7 +177,7 @@ jQuery(document).ready(function($) {
                 $activatedslider = 0;
         }
     }
-    $interval2 = setInterval(function() { activeSlider() }, 5000);
+    $interval2 = setInterval(function() { activeSlider() }, 7000);
     $('.sliderNews').on('click', function() {
         $('.sliderNews').css('background-color', '#1d1e20');
         $('.sliderNewsTitle').css('color', 'white');
