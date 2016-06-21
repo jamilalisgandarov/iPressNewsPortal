@@ -97,7 +97,7 @@ jQuery(document).ready(function($) {
             $('.sliderTrack').css('margin-top', '' + $marginOut + 'px');
         }
     }
-    $interval=setInterval(function() { carouselInterval() }, 6000);
+    $interval = setInterval(function() { carouselInterval() }, 7000);
     $('.sliderMainTrack').mousedown(function(event) {
         $clickedX = event.pageY;
         clearInterval($interval);
@@ -128,10 +128,10 @@ jQuery(document).ready(function($) {
         });
     });
     $('.sliderTrack').mouseleave(function(event) {
-       $(".sliderMainTrack").unbind('mousemove');
+        $(".sliderMainTrack").unbind('mousemove');
     });
     $('.sliderTrack').mouseup(function(event) {
-       $(".sliderMainTrack").unbind('mousemove');
+        $(".sliderMainTrack").unbind('mousemove');
     });
     $(document).mouseup(function(event) {
         $(".sliderMainTrack").unbind('mousemove');
@@ -148,6 +148,35 @@ jQuery(document).ready(function($) {
         }
 
     });
+
+    function activated() {
+        $('.sliderNews').css('background-color', '#1d1e20');
+        $('.sliderNewsTitle').css('color', 'white');
+        $('.sliderNews:first-child').children('.sliderNewsTitle').css('color', '#d54646');
+        $('.sliderNews').removeClass('triangle');
+        $('.sliderNews h4').removeClass('sliderNewsTitleColored')
+        $('.sliderNews').removeClass('activeSlider');
+        $('.sliderNews:first-child').addClass('triangle');
+        $('sliderNews:first-child').css('background', '#242527');
+    }
+    activated();
+    $activatedslider = 0;
+
+    function activeSlider() {
+        $activatedslider++;
+        $('.sliderNews').css('background-color', '#1d1e20');
+        $('.sliderNewsTitle').css('color', 'white');
+        $('.sliderNews').eq($activatedslider).children('.sliderNewsTitle').css('color', '#d54646');
+        $('.sliderNews').removeClass('triangle');
+        $('.sliderNews h4').removeClass('sliderNewsTitleColored')
+        $('.sliderNews').removeClass('activeSlider');
+        $('.sliderNews').eq($activatedslider).addClass('triangle');
+        $('sliderNews').eq($activatedslider).css('background', '#242527');
+        if($('.sliderNews').length-1==$activatedslider){
+                $activatedslider = 0;
+        }
+    }
+    $interval2 = setInterval(function() { activeSlider() }, 5000);
     $('.sliderNews').on('click', function() {
         $('.sliderNews').css('background-color', '#1d1e20');
         $('.sliderNewsTitle').css('color', 'white');

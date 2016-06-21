@@ -22,6 +22,10 @@ $stumbleupon: #EB4823;
 $yahoo: #7B0099;
 $blogger: #fb8f3d;
 $soundcloud: #ff3a00;
+@font-face {
+  font-family: 'RobotoRegular';
+  src: url(assets/font/roboto.regular.ttf); 
+}
 body {
     overflow-x: hidden;
 }
@@ -35,6 +39,7 @@ body {
 }
 
 #header-wrap {
+    font-family: "RobotoRegular";
     .flexDisplay {
         display: flex;
         align-items: center;
@@ -78,6 +83,7 @@ body {
             p {
                 color: lightgray;
                 text-decoration: none;
+                    font-family: "RobotoRegular";
             }
         }
         .live-cta {
@@ -194,9 +200,12 @@ body {
             border-radius: 2px;
             background-color: $colorLikeGray;
             width: 160px;
+            font-size: 12px;
             justify-content: center;
             color: lightgray;
+
             p {
+                    font-family: "RobotoRegular";
                 justify-content: center;
                 margin-top: 10px;
             }
@@ -271,6 +280,7 @@ body {
         height: 162px;
         .container {
             height: 100%;
+
             .row {
                 height: 100%;
                 .advMain {
@@ -287,7 +297,10 @@ body {
         .adv {
             width: 728px;
             height: 90px;
-            border: 1px solid black;
+            img{
+                position:absolute;
+                right:-8px;
+            }
         }
         @media screen and (max-width: 1000px) {
             .mainLogo {
@@ -301,7 +314,7 @@ body {
         height: 60px;
         background-color: $colorDark;
         width: 105%;
-        border-bottom: 3px solid $colorPink;
+        border-bottom: 5px solid $colorPink;
         .mainul {
             position: absolute;
             width: 100%;
@@ -318,7 +331,8 @@ body {
         .nav {
             margin-bottom: 0px;
             a {
-                font: 500 11px Lato;
+                    font-family: "RobotoRegular" !important;
+                font-size: 13px;
                 letter-spacing: 2px;
                 padding: 22.5px 20px!important;
                 color: #a3bfc6 !important;
@@ -513,6 +527,7 @@ body {
     .sliderFrame {
         height: 380px;
         margin-top: 50px;
+            margin-left: 16px;
         overflow: hidden;
         .sliderOverlay {
             height: 100%;
@@ -542,6 +557,8 @@ body {
             }
         }
     }
+    .col-md-9{
+            padding: 0 !important;
     .col-md-8 {
         height: 100%;
         .sliderImgFull {
@@ -549,7 +566,7 @@ body {
             height: 100%;
             width: 100%;
         }
-    }
+    }}
     .activeSlider{
         background: $colorLikeGray !important;
     }
