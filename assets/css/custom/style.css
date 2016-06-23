@@ -453,8 +453,10 @@ body {
 }
 
 #header-wrap .topNav .navbar-brand i {
-    font-size: 34px;
-    padding: 12px 12px;
+    font-size: 24px;
+    position: absolute;
+    padding: 17px 20px;
+    z-index: 4;
     background: #e84a4a;
 }
 
