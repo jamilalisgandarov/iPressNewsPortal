@@ -23,11 +23,29 @@ $yahoo: #7B0099;
 $blogger: #fb8f3d;
 $soundcloud: #ff3a00;
 @font-face {
-  font-family: 'RobotoRegular';
-  src: url(assets/font/roboto.regular.ttf); 
+    font-family: 'RobotoRegular';
+    src: url(../../fonts/roboto.regular.ttf);
 }
+
 body {
     overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Chrome/Safari/Opera */
+    -khtml-user-select: none;
+    /* Konqueror */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
+                                  not supported by any browser */
 }
 
 .padding {
@@ -43,18 +61,6 @@ body {
     .flexDisplay {
         display: flex;
         align-items: center;
-    }
-    .blue {
-        background-color: blue;
-    }
-    .red {
-        background-color: red;
-    }
-    .gray {
-        background-color: gray;
-    }
-    .green {
-        background-color: green;
     }
     .height {
         height: 47px;
@@ -72,6 +78,7 @@ body {
         }
         .hotNewsMain {
             display: flex;
+            font-size: 12px;
             align-items: center;
             a {
                 margin-left: 20px;
@@ -83,17 +90,18 @@ body {
             p {
                 color: lightgray;
                 text-decoration: none;
-                    font-family: "RobotoRegular";
+                font-family: "RobotoRegular";
             }
         }
         .live-cta {
             position: absolute;
-            top: 8px !important;
-            left: 0px;
+            top: 7px !important;
+            left: 10px;
         }
         .hotNewsTextMain {
             position: relative;
             overflow: hidden;
+            left: 15px;
             .newsOverlay {
                 position: absolute;
                 height: 100%;
@@ -203,18 +211,23 @@ body {
             font-size: 12px;
             justify-content: center;
             color: lightgray;
-
+            position: absolute;
+            right: -55px;
+            top: 7px;
             p {
-                    font-family: "RobotoRegular";
+                font-family: "RobotoRegular";
                 justify-content: center;
                 margin-top: 10px;
             }
         }
         .socialNetworks {
-            width: 183px;
             height: 100%;
             color: lightgray;
-            padding: 0px 1px;
+            padding: 1px 2px;
+            right: -28px;
+            position: absolute;
+            height: 100%;
+            color: lightgray;
             border-left: 1px solid $colorBorder;
             border-right: 1px solid $colorBorder;
             a {
@@ -228,27 +241,25 @@ body {
                 padding: 6px 10px;
                 border-radius: 5px;
             }
-            .fa:hover {
-                transform:translate3d(0,-3px,5px);
-            }
             a:first-child i:hover {
                 background-color: $facebook;
             }
             a:nth-child(2) i:hover {
                 background-color: lightgray;
             }
-             a:nth-child(3) i:hover {
+            a:nth-child(3) i:hover {
                 background-color: $dribbble;
             }
-             a:nth-child(4) i:hover {
+            a:nth-child(4) i:hover {
                 background-color: $twitter;
             }
-             a:nth-child(5) i:hover {
+            a:nth-child(5) i:hover {
                 background-color: $googleplus;
             }
         }
         .languageSelector {
-            padding: 7px 21px;
+            left: 24px;
+            top: 4px;
             float: right;
             .langSelector {
                 float: right;
@@ -280,7 +291,6 @@ body {
         height: 162px;
         .container {
             height: 100%;
-
             .row {
                 height: 100%;
                 .advMain {
@@ -297,9 +307,9 @@ body {
         .adv {
             width: 728px;
             height: 90px;
-            img{
-                position:absolute;
-                right:-8px;
+            img {
+                position: absolute;
+                right: -8px;
             }
         }
         @media screen and (max-width: 1000px) {
@@ -311,19 +321,18 @@ body {
     }
     /*  <!--   Navbar row -->*/
     .topNav {
-        height: 60px;
+        height: 64px;
         background-color: $colorDark;
         width: 105%;
-        border-bottom: 5px solid $colorPink;
+        border-bottom: 4px solid $colorPink;
         .mainul {
             position: absolute;
             width: 100%;
             z-index: 1;
-            padding: 0px 28px;
+            padding: 0px 38px;
         }
         .navbar-brand {
-            font: 12px Lato !important;
-            text-transform: uppercase;
+            text-transform: capitalize;
             color: #FFF !important;
             letter-spacing: 2px;
             margin-top: 2px;
@@ -331,12 +340,11 @@ body {
         .nav {
             margin-bottom: 0px;
             a {
-                    font-family: "RobotoRegular" !important;
-                font-size: 13px;
-                letter-spacing: 2px;
-                padding: 22.5px 20px!important;
+                font-family: 'Roboto', sans-serif;
+                font-size: 18px;
+                padding: 20px 23px !important;
                 color: #a3bfc6 !important;
-                text-transform: uppercase;
+                text-transform: capitalize;
                 position: relative;
                 z-index: 1000;
             }
@@ -366,7 +374,7 @@ body {
                     list-style: none;
                     padding: 6px;
                     .mainSearch {
-                        margin-right: 60px;
+                        margin-right: 33px;
                         .searchMain {
                             position: relative;
                             display: inline-block;
@@ -402,7 +410,7 @@ body {
                             margin-bottom: 8px;
                             display: inline-block;
                             a {
-                                padding: 7px 10px !important;
+                                padding: 5px 10px !important;
                                 position: absolute;
                                 top: 3px !important;
                                 width: 40px;
@@ -412,7 +420,7 @@ body {
                                 padding: 10px;
                             }
                             i {
-                                font-size: 21px;
+                                font-size: 17px;
                                 color: lightgray;
                             }
                         }
@@ -421,9 +429,13 @@ body {
             }
         }
         .navbar-brand i {
-            font-size: 34px;
-            padding: 12px 12px;
+            font-size: 21px;
+            padding: 20px 22px;
             background: #e84a4a;
+            margin-left: -1px;
+        }
+        .navbar-header {
+            margin-left: 3px;
         }
         .navbar-brand {
             padding: 0px !important;
@@ -527,8 +539,13 @@ body {
     .sliderFrame {
         height: 380px;
         margin-top: 50px;
-            margin-left: 16px;
+        margin-left: 16px;
         overflow: hidden;
+        .sliderImageFrame {
+            width: 585px;
+            height: 380px;
+            background: gray;
+        }
         .sliderOverlay {
             height: 100%;
             width: 100%;
@@ -536,7 +553,13 @@ body {
             top: 0;
         }
         .sliderMain {
-            position: relative;
+            top: 50px;
+            width: 304px;
+            overflow-y: scroll;
+            height: 380px;
+            right: -25px;
+            transition: 10s linear;
+            position: absolute;
             i:first-child {
                 position: absolute;
                 font-size: 40px;
@@ -556,21 +579,63 @@ body {
                 color: gray;
             }
         }
-    }
-    .col-md-9{
-            padding: 0 !important;
-    .col-md-8 {
-        height: 100%;
-        .sliderImgFull {
-            background: gray;
-            height: 100%;
-            width: 100%;
+        .sliderMain::-webkit-scrollbar {
+            width: 14px;
+            height: 18px;
+            background-color: $colorDark;
         }
-    }}
-    .activeSlider{
+        .sliderMain::-webkit-scrollbar-thumb {
+            height: 6px;
+            border: 4px solid rgba(0, 0, 0, 0);
+            background-clip: padding-box;
+            -webkit-border-radius: 7px;
+            background-color: $colorPink;
+            -webkit-box-shadow: inset -1px -1px 0px rgba(0, 0, 0, 0.05), inset 1px 1px 0px rgba(0, 0, 0, 0.05);
+        }
+        .sliderMain::-webkit-scrollbar-button {
+            width: 0;
+            height: 0;
+            display: none;
+        }
+        .sliderMain::-webkit-scrollbar-corner {
+            background-color: transparent;
+        }
+    }
+    .col-md-9 {
+        padding: 0 !important;
+        .col-md-8 {
+            height: 100%;
+            .sliderImgFull {
+                background: gray;
+                height: 100%;
+                width: 100%;
+                img {
+                    max-width: 100%;
+                    max-height: 100%;
+                }
+            }
+        }
+    }
+    div.category {
+        position: absolute;
+        width: 100px;
+        bottom: 15px;
+        left: 30px;
+        height: 30px;
+        background-color: #4a7ee8;
+    }
+    div.rating {
+        width: 55px;
+        position: absolute;
+        height: 20px;
+        bottom: 44px;
+        left: 30px;
+     background: #f2b620;
+    }
+    .activeSlider {
         background: $colorLikeGray !important;
     }
-    .sliderNewsTitleColored{
+    .sliderNewsTitleColored {
         color: #d54646;
     }
     .sliderNews {
@@ -578,21 +643,21 @@ body {
         border-bottom: 1px solid $colorBorder;
         background: $colorDark;
         padding: 5px;
-        cursor:pointer;
-        .sliderNewsTitle,.sliderNewsText{
+        cursor: pointer;
+        .sliderNewsTitle,
+        .sliderNewsText {
             font-family: 'Roboto', sans-serif;
         }
-        .sliderNewsTitle{
+        .sliderNewsTitle {
             margin-bottom: 10px;
             margin-top: 5px;
             font-size: 17px;
-            font-weight:bold;
+            font-weight: bold;
             color: white;
         }
-        .sliderNewsText{
+        .sliderNewsText {
             font-size: 15px;
             color: lightgray;
-            
         }
     }
     .sliderTrack {
