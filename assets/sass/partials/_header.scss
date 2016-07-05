@@ -65,9 +65,7 @@ body {
     .height {
         height: 47px;
     }
-    .oferflow {
-        overflow: hidden;
-    }
+
     /*Hot news , date and language selection section*/
     .topHeader {
         background-color: $colorDark;
@@ -211,8 +209,6 @@ body {
             font-size: 12px;
             justify-content: center;
             color: lightgray;
-            position: absolute;
-            right: -55px;
             top: 7px;
             p {
                 font-family: "RobotoRegular";
@@ -224,10 +220,8 @@ body {
             height: 100%;
             color: lightgray;
             padding: 1px 2px;
-            right: -28px;
+            overflow: hidden;
             position: absolute;
-            height: 100%;
-            color: lightgray;
             border-left: 1px solid $colorBorder;
             border-right: 1px solid $colorBorder;
             a {
@@ -266,6 +260,10 @@ body {
                 width: 100%;
                 position: relative;
                 z-index: 5;
+                div{
+                    display: flex;
+                    justify-content: center;
+                }
                 ul {
                     list-style: none;
                     margin: 0px !important;
@@ -535,7 +533,6 @@ body {
 }
 
 #slider-wrap {
-    height: 1000px;
     .sliderFrame {
         height: 380px;
         margin-top: 50px;
@@ -630,7 +627,7 @@ body {
         height: 20px;
         bottom: 44px;
         left: 30px;
-     background: #f2b620;
+        background: #f2b620;
     }
     .activeSlider {
         background: $colorLikeGray !important;

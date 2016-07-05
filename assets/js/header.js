@@ -103,7 +103,10 @@ jQuery(document).ready(function($) {
     }  
     $interval = setInterval(function() { carouselInterval() }, 7000);
 
-
+    $('.sliderNews').click(function(event) {
+     clearInterval($interval);
+     clearInterval($interval2);
+    });
     function activated() {
         $('.sliderNews').css('background-color', '#1d1e20');
         $('.sliderNewsTitle').css('color', 'white');
